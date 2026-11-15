@@ -8,6 +8,13 @@
       "when": 1794661332974,
       "tag": "0000_shocking_freak",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794745858976,
+      "tag": "0001_oval_millenium_guard",
+      "breakpoints": true
     }
   ]
 }
