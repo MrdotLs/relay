@@ -4,6 +4,7 @@ import cookie from '@fastify/cookie';
 import fastifyStatic from '@fastify/static';
 import { authRoutes } from './routes/auth.js';
 import { meRoute } from './routes/me.js';
+import { workspaceRoutes } from './routes/workspaces.js';
 
 
 export async function buildApp(opts: {sessionSecret: string, serverWeb?: boolean}) {
@@ -14,6 +15,7 @@ export async function buildApp(opts: {sessionSecret: string, serverWeb?: boolean
     app.get('/api/health', async() => ({ok: true}));
     await app.register(authRoutes, {prefix: '/api/auth'});
     await app.register(meRoute, {prefix: '/api'});
+    await app.register(workspaceRoutes, {prefix: '/api'});
 
 
     if(opts.serverWeb){

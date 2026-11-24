@@ -1,6 +1,5 @@
 import type { FastifyReply, FastifyRequest } from "fastify";
 import { validateSession } from "./session.js";
-import { error } from "node:console";
 
 export const SESSION_COOKIE = 'relay_session';
 
